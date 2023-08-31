@@ -1,5 +1,4 @@
-const {Contact} = require("../schemas");
-
+const {Contact} = require("../models");
 const { ctrlWrapper } = require("../helpers");
 
 const getAll = async (req, res) => {
