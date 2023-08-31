@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
-const updateStatus = Joi.object({
+const favoriteSchema = Joi.object({
   favorite: Joi.boolean().required().messages({ "any.required": "missing field favorite" }),
 });
 
-module.exports = updateStatus;
+module.exports = favoriteSchema;

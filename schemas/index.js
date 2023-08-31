@@ -1,7 +1,11 @@
 const addSchema = require('./addSchema');
-const updateStatus = require('./updateStatus');
+const favoriteSchema = require('./favoriteSchema');
+const registerSchema = require('./registerSchema');
+const loginSchema = require('./loginSchema');
 
 module.exports = {
     addSchema,
-    updateStatus,
+    favoriteSchema,
+    registerSchema,
+    loginSchema,
 };

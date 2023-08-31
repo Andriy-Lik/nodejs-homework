@@ -4,7 +4,7 @@ const ctrl = require('../../controllers/contacts');
 
 const { validateBody, isValidId, validateStatus } = require('../../middlewares');
 
-const {addSchema, updateStatus} = require('../../schemas');
+const {addSchema, favoriteSchema} = require('../../schemas');
 
 const router = express.Router();
 
@@ -16,7 +16,7 @@ router.post('/', validateBody(addSchema), ctrl.add);
 
 router.put('/:id', isValidId, validateBody(addSchema), ctrl.updateById);
 
-router.patch('/:id/favorite', isValidId, validateStatus(updateStatus), ctrl.updateStatus);
+router.patch('/:id/favorite', isValidId, validateStatus(favoriteSchema), ctrl.updateStatus);
 
 router.delete('/:id', isValidId, ctrl.deleteById);
 
